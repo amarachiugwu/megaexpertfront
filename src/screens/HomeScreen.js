@@ -25,7 +25,7 @@ function HomeScreen () {
                                 <h1 className="banner-title">Mega <span className="text--base">Expert </span><span> Finance</span></h1>
                                 <span className="subtitle" style={{ textTransform:"lowercase" }}>DECENTRALIZED TRADING & INVESTMENT PLATFORM WITH BLOCKCHAIN INFRASTRUCTURE</span>
                                 <div className="button-group d-flex flex-wrap align-items-center">
-                                    <a href="signup" className="cmn--btn btn--secondary">get started</a>
+                                    <a href="sign-up" className="cmn--btn btn--secondary">get started</a>
                                 </div>
                             </div>
                         </div>

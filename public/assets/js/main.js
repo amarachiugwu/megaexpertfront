@@ -9,21 +9,22 @@ $(window).on('load', function () {
 //Menu Dropdown
 $("ul>li>.sub-menu").parent("li").addClass("has-sub-menu");
 
-$('.menu li a').on('click', function (e) {
-  var element = $(this).parent('li');
-  if (element.hasClass('open')) {
-    element.removeClass('open');
-    element.find('li').removeClass('open');
-    element.find('ul').slideUp(400, "swing");
-  } else {
-    element.addClass('open');
-    element.children('ul').slideDown(400, "swing");
-    element.siblings('li').children('ul').slideUp(400, "swing");
-    element.siblings('li').removeClass('open');
-    element.siblings('li').find('li').removeClass('open');
-    element.siblings('li').find('ul').slideUp(400, "swing");
-  }
-});
+// $('.menu li a').on('click', function (e) {
+//   var element = $(this).parent('li');
+//   if (element.hasClass('open')) {
+//     element.removeClass('open');
+//     element.find('li').removeClass('open');
+//     element.find('ul').slideUp(400, "swing");
+//   } else {
+//     element.addClass('open');
+//     element.children('ul').slideDown(400, "swing");
+//     element.siblings('li').children('ul').slideUp(400, "swing");
+//     element.siblings('li').removeClass('open');
+//     element.siblings('li').find('li').removeClass('open');
+//     element.siblings('li').find('ul').slideUp(400, "swing");
+//   }
+// });
+
 $('.menu li .cmn--btn').on('click', function (e) {
   var ele = $(this).parent('li');
   ele.removeClass('open')
@@ -40,18 +41,19 @@ overlay.on('click', function() {
 
     
 // Responsive Menu
-var headerTrigger = $('.header-trigger');
-headerTrigger.on('click', function(){
-    $('.menu,.header-trigger').toggleClass('active')
-    $('.overlay').toggleClass('overlay-color')
-    $('.overlay').removeClass('active')
-});
+// var headerTrigger = $('.header-trigger');
+// headerTrigger.on('click', function(){
+//     $('.menu,.header-trigger').toggleClass('active')
+//     $('.overlay').toggleClass('overlay-color')
+//     $('.overlay').removeClass('active')
+// });
 
-var over = $('.overlay');
-over.on('click', function() {
-  $('.overlay').removeClass('overlay-color')
-  $('.menu, .header-trigger').removeClass('active')
-})
+// var over = $('.overlay');
+// over.on('click', function() {
+//   $('.overlay').removeClass('overlay-color')
+//   $('.menu, .header-trigger').removeClass('active')
+// })
+
 
 
 // Sticky Menu

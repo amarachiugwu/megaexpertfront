@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery'
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import AboutScreen from './screens/AboutScreen';
 import ContactScreen from './screens/ContactScreen';
@@ -8,9 +9,44 @@ import LoginScreen from './screens/LoginScreen';
 import MissionVisionScreen from './screens/MissionVisionScreen';
 import SignupScreen from './screens/SignupScreen';
 function App() {
+
+
+    function dropDown() {
+        var element = $(this).parent('li');
+        element.toggleClass('open');
+        if (element.hasClass('open')) {
+            // element.removeClass('open');
+            // element.find('li').removeClass('open');
+            // element.find('ul').slideUp(400, "swing");
+        } else {
+            // element.addClass('open');
+            // element.children('ul').slideDown(400, "swing");
+            // element.siblings('li').children('ul').slideUp(400, "swing");
+            // element.siblings('li').removeClass('open');
+            // element.siblings('li').find('li').removeClass('open');
+            // element.siblings('li').find('ul').slideUp(400, "swing");
+        }
+    }
+
+    
+    function toggleNav() {
+        $('.menu,.header-trigger').toggleClass('active')
+        $('.overlay').toggleClass('overlay-color')
+        $('.overlay').removeClass('active')
+    }
+
+
+    function toggleOverlay() {
+        $('.overlay').removeClass('overlay-color')
+        $('.menu, .header-trigger').removeClass('active')
+    }
+
+
   return (
     <BrowserRouter>
       <div className="App">
+
+        <div className="overlay" onClick={toggleOverlay}></div>
 
         <header className="header">
           <div className="header-bottom">
@@ -21,53 +57,53 @@ function App() {
                         <img src="/assets/images/logo.png" alt="logo" />
                     </Link>
                 </div>
-                <div className="header-trigger d-block d-lg-none">
+                <div className="header-trigger d-block d-lg-none" onClick={toggleNav}>
                     <span></span>
                 </div>
                 <ul className="menu">
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/" onClick={toggleNav}>Home</Link>
                     </li>
 
                     <li>
-                        <Link to="/about">About</Link>
+                        <Link to="/about" onClick={toggleNav}>About</Link>
                     </li>
 
-                    <li className="has-sub-menu">
-                        <Link to="#">Plan</Link>
+                    <li className="has-sub-menu" onClick={dropDown}>
+                        <Link to="#" onClick={dropDown}>Plan</Link>
                         <ul className="sub-menu">
                             <li>
-                                <Link to="/investment-plan-01">Investment Plan 01</Link>
+                                <Link to="/investment-plan-01" onClick={toggleNav}>Investment Plan 01</Link>
                             </li>
                             <li>
-                                <Link to="/investment-plan-02">Investment Plan 02</Link>
+                                <Link to="/investment-plan-02" onClick={toggleNav}>Investment Plan 02</Link>
                             </li>
                             <li>
-                                <Link to="/investment-plan-03">Investment Plan 03</Link>
+                                <Link to="/investment-plan-03" onClick={toggleNav}>Investment Plan 03</Link>
                             </li>
                         </ul>
                     </li>
 
                     <li>
-                        <Link to="/mission-vision">Mission & Vision</Link>
+                        <Link to="/mission-vision" onClick={toggleNav}>Mission & Vision</Link>
                     </li>
 
                     <li>
-                        <Link to="/faq">Faq</Link>
+                        <Link to="/faq" onClick={toggleNav}>Faq</Link>
                     </li>
                   
                     <li>
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/contact" onClick={toggleNav}>Contact</Link>
                     </li>
                     
                     <li className="has-sub-menu">
                         <Link to="#">Account</Link>
                         <ul className="sub-menu">
                             <li>
-                                <Link to="/login">Log In</Link>
+                                <Link to="/login" onClick={toggleNav}>Log In</Link>
                             </li>
                             <li>
-                                <Link to="/sign-up">Sign Up</Link>
+                                <Link to="/sign-up" onClick={toggleNav}>Sign Up</Link>
                             </li>
                         </ul>
                     </li>
@@ -158,7 +194,7 @@ function App() {
                                   <i className="las la-angle-double-right"></i>Login</Link>
                               </li>
                               <li>
-                                  <Link to="/signup">
+                                  <Link to="/sign-up">
                                       
                                   <i className="las la-angle-double-right"></i>Signup</Link>
                               </li>
