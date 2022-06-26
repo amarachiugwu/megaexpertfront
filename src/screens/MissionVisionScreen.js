@@ -90,6 +90,33 @@ function MissionVisionScreen() {
 
 
 
+        
+        <section className="commission-section bg_img" style={{ background: "url(assets/images/affiliate/bg.jpg) no-repeat center" }}>
+            <div className="container">
+                <div className="commission-wrapper">
+                    <div className="commission-thumb d-none d-lg-block">
+                        <img src="assets/images/commission/thumb.png" alt="commission"/>
+                    </div>
+                    <div className="commission-content"> 
+                        <h2 className="title">30% <br/>
+                            <span>Affiliate Commission</span>
+                        </h2>
+                        <p>
+                            Phasellus a non dui hymenaeos mi ideu non ut lacus, nec erat consequataceuaugueid augue gravida consequat Magna erat nuncsit.
+                        </p>
+                        <a href="affiliate.html" className="cmn--btn">View Details</a>
+                        <div className="shape1">
+                            <img src="assets/images/commission/shape1.png" alt="commission"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+
+
+
         <section className="plan-section padding-top padding-bottom overflow-hidden">
             <div className="container">
                 <div className="row justify-content-center">

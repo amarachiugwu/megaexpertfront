@@ -1,7 +1,113 @@
-import React from "react";
+import React, { useEffect } from "react";
+// import $ from 'jquery'
+import Slider from "react-slick";
 import WhyUsBox from "../components/WhyUsBox";
-
+import ProfitCalculatorBox from '../components/ProfitCalculatorBox'
 function HomeScreen () {
+
+    useEffect(() => {
+        
+        // $(".counter-item").each(function () {
+        //     $(this).isInViewport(function (status) {
+        //       if (status === "entered") {
+        //         for (var i = 0; i < document.querySelectorAll(".odometer").length; i++) {
+        //           var el = document.querySelectorAll('.odometer')[i];
+        //           el.innerHTML = el.getAttribute("data-odometer-final");
+        //         }
+        //       }
+        //     });
+        // });
+      
+    }, [])
+
+    function NextArrow(props) {
+        const { onClick } = props;
+        return (
+            <i 
+                onClick={onClick}
+                className="las la-arrow-right arrow-right slick-arrow"></i>
+        );
+    }
+
+    function PrevArrow(props) {
+        const { onClick } = props;
+        return (
+            <i 
+                onClick={onClick}
+                className="las la-arrow-left arrow-left slick-arrow"></i>
+        );
+    }
+
+    var testimonials = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true,
+        dots: false,
+        focusOnSelect: true,
+        autoplay: true,
+        pauseOnHover: true,
+        centerMode: true,
+        fade: true,
+        speed: 1000,
+        nextArrow: <NextArrow/>,
+        prevArrow: <PrevArrow/>,
+    }
+
+    const styles = {
+        testimonialImg:{
+            borderRadius: '15px 0px 15px 15px',
+            overflow: 'hidden',
+            width: '100px',
+            margin: '0 auto',
+        }
+    }
+
+    var sponsors = {
+        slidesToShow: 6,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 5,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+      
+        ]
+    };
+
+    function  toggleQstn() {
+
+    }
+
 
     return (
         
@@ -36,7 +142,7 @@ function HomeScreen () {
 
 
 
-            <section className="how-work padding-top">
+            <section className="how-work padding-top padding-bottom">
                 <div className="container">
                     <div className="row justif-content-center align-items-center">
                         <div className="col-lg-6">
@@ -92,6 +198,78 @@ function HomeScreen () {
                     </div>
                 </div>
             </section>
+
+            
+
+
+            <div className="sponsor-section wow fadeInUp">
+                <div className="container">
+                    <div className="sponsor-slider">
+                        <Slider {...sponsors}>
+                            <div className="single-slide">
+                                <div className="brand-item">
+                                    <img src="assets/images/sponsor/item1.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="single-slide">
+                                <div className="brand-item">
+                                    <img src="assets/images/sponsor/item2.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="single-slide">
+                                <div className="brand-item">
+                                    <img src="assets/images/sponsor/item3.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="single-slide">
+                                <div className="brand-item">
+                                    <img src="assets/images/sponsor/item4.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="single-slide">
+                                <div className="brand-item">
+                                    <img src="assets/images/sponsor/item5.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="single-slide">
+                                <div className="brand-item">
+                                    <img src="assets/images/sponsor/item6.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="single-slide">
+                                <div className="brand-item">
+                                    <img src="assets/images/sponsor/item1.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="single-slide">
+                                <div className="brand-item">
+                                    <img src="assets/images/sponsor/item2.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="single-slide">
+                                <div className="brand-item">
+                                    <img src="assets/images/sponsor/item3.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="single-slide">
+                                <div className="brand-item">
+                                    <img src="assets/images/sponsor/item4.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="single-slide">
+                                <div className="brand-item">
+                                    <img src="assets/images/sponsor/item5.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="single-slide">
+                                <div className="brand-item">
+                                    <img src="assets/images/sponsor/item6.png" alt=""/>
+                                </div>
+                            </div>
+                        </Slider> 
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -258,61 +436,436 @@ function HomeScreen () {
 
 
 
-            <WhyUsBox/>
-
-
-
-
-            <section className="profit-calculation wow slideInUp overflow-hidden">
+            <section className="counter-section padding-top">
                 <div className="container">
-                    <div className="profit-calculation-wrapper">
-                        <h3 className="title">Calculate How Much You Profit</h3>
-                        <form className="profit-form">
-                            <div className="row g-4">
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="form--group">
-                                        <select>
-                                            <option value="plan01">Select the Plan</option>
-                                            <option value="plan01">Business Plan</option>
-                                            <option value="plan01">Professional Plan</option>
-                                            <option value="plan01">Individual Plan</option>
-                                        </select>
+                    <div className="row justif-content-center gy-5">
+                        <div className="col-lg-3 col-sm-6">
+                            <div className="counter-wrapper">
+                                <div className="counter-item">
+                                    <div className="counter-inner">
+                                        <h2 className="counter-sign">$ </h2>
+                                        <span className="odometer title" data-odometer-final="557"></span>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="form--group">
-                                        <select>
-                                            <option value="plan01">Select the Currency</option>
-                                            <option value="plan01">Bitcoin</option>
-                                            <option value="plan01">Ethereum</option>
-                                            <option value="plan01">Ripple</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4">
-                                    <div className="form--group">
-                                        <input type="text" className="form--control" placeholder="Enter the Ammount" required />
-                                    </div>
-                                </div>
+                                <span className="info">Invested in pitches</span>
                             </div>
-                        </form>
-                        <div className="profit-title-wrapper d-flex justify-content-between my-5 mb-3">
-                            <h5 className="daily-profit text--secondary">Daily Profit - <span className="ammount">0.1200</span>BTC</h5>
-                            <h5 className="daily-profit theme-four">Total Profit - <span className="ammount">24.1200</span>BTC</h5>
                         </div>
-                        <div className="invest-range-area">
-                            <div className="main-amount">
-                                <input type="text" className="calculator-invest" id="btc-amount" readOnly />
+                        <div className="col-lg-3 col-sm-6">
+                            <div className="counter-wrapper">
+                                <div className="counter-item">
+                                    <div className="counter-inner">
+                                        <span className="odometer title" data-odometer-final="254"></span>
+                                        <h2 className="counter-sign">K</h2>
+                                    </div>
+                                </div>
+                                <span className="info">Registrated Members</span>
                             </div>
-                            <div className="invest-amount" data-min="01 BTC" data-max="10000 BTC">
-                                <div id="btc-range" className="invest-range-slider"></div>
+                        </div>
+                        <div className="col-lg-3 col-sm-6">
+                            <div className="counter-wrapper">
+                                <div className="counter-item">
+                                    <div className="counter-inner">
+                                        <span className="odometer title" data-odometer-final="774"></span>
+                                        <h2 className="counter-sign">K</h2>
+                                    </div>
+                                </div>
+                                <span className="info">Average Investment</span>
                             </div>
-                            <button type="submit" className="custom-button px-0">Invest now</button>
+                        </div>
+                        <div className="col-lg-3 col-sm-6">
+                            <div className="counter-wrapper">
+                                <div className="counter-item">
+                                    <div className="counter-inner">
+                                        <span className="odometer title" data-odometer-final="7740"></span>
+                                    </div>
+                                </div>
+                                <span className="info">Total Investment Plan</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
+
+
+
+            <WhyUsBox/>
+
+
+
+
+            <section className="testimonial-seciton pb-180">
+                <div className="container">
+                    <div className="row gy-4 align-items-center justify-content-center">
+                        <div className="col-lg-5 d-none d-lg-block  wow slideInLeft">
+                            <div className="testimonial-thumb">
+                                <img src="assets/images/testimonial/thumb2.png" alt="testimonial"/>
+                            </div>
+                        </div>
+                        <div className="col-lg-7 col-md-10">
+                            <div className="testimonial-content">
+                                <div className="section-header text-center">
+                                    <span className="subtitle wow fadeInUp">our happly client</span>
+                                    <h2 className="title wow fadeInUp" data-wow-delay=".5s">Discover Our Happy 
+                                        Client Feedback</h2>
+                                </div>
+                                <div className="testimonial-slider-wrapper">
+                                    
+                                    <div className="testimonial-slider">
+                                        <Slider
+                                            {...testimonials}
+                                            >
+                                            <div className="content-item">
+                                                <div className="img-item padding bottom" style={styles.testimonialImg}>
+                                                    <img src="assets/images/testimonial/item3.png" alt="testimonial"/>
+                                                </div>
+
+                                                <div className="quote-icon">
+                                                    <i className="las la-quote-left"></i>
+                                                </div>
+                                                <div className="content-inner">
+                                                    <p>
+                                                    Pipsum dolor sit, amet  adipisicing elit. Molestiae similique facere quia! Eligendi, eveniet aut impedit deleniti autem obcaecati ni
+                                                    </p>
+                                                    <h5 className="name">Robindronath Chondro</h5>
+                                                    <span className="designation">Businessman</span>
+                                                </div>
+                                            </div>
+                                            <div className="content-item">
+
+                                                <div className="img-item padding bottom" style={styles.testimonialImg}>
+                                                    <img src="assets/images/testimonial/item3.png" alt="testimonial"/>
+                                                </div>
+
+                                                <div className="quote-icon">
+                                                    <i className="las la-quote-left"></i>
+                                                </div>
+                                                <div className="content-inner">
+                                                    <p>
+                                                        Mattis vestibulum elit omnis metuseu urna at facilisi loborntum turpis velsed molestie varius purus rhoncus 
+                                                    </p>
+                                                    <h5 className="name">Jubayer Al Somser</h5>
+                                                    <span className="designation">Developer</span>
+                                                </div>
+                                            </div>
+                                            <div className="content-item">
+                                                <div className="img-item padding bottom" style={styles.testimonialImg}>
+                                                    <img src="assets/images/testimonial/item4.png" alt="testimonial"/>
+                                                </div>
+
+                                                <div className="quote-icon">
+                                                    <i className="las la-quote-left"></i>
+                                                </div>
+                                                <div className="content-inner">
+                                                    <p>
+                                                        Kikit Mattis vestibulum elit omnis metuseu urna at facilisi loborntum turpis velsed molestie varius purus rhoncus  incidunt ipsam soluta rem ipsum.
+                                                    </p>
+                                                    <h5 className="name">Raihan Rafuj</h5>
+                                                    <span className="designation">Designer</span>
+                                                </div>
+                                            </div> 
+                                        </Slider>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section className="help-section  overflow-hidden">
+                <div className="container">
+                    <div className="row align-items-center gy-5 flex-column-reverse flex-lg-row">
+                        <div className="col-lg-6">
+                            <div className="help-content">
+                                <div className="section-header">
+                                    <span className="subtitle wow fadeInUp">we are ready for your help</span>
+                                    <h2 className="title wow fadeInUp" data-wow-delay=".5s">How We Can Help You?</h2>
+                                    <p className="wow fadeInUp" data-wow-delay=".6s">
+                                        Dapibus et amet sociis, arcu orci orci tincidunt neque. Purus etortor sjustmauris eumalesuada architecto.
+                                    </p>
+                                </div>
+                                <div className="faq-tab-menu nav-tabs nav border-0 row g-4 justify-content-center">
+                                    <div className="col-6 col-sm-4 col-md-4 col-lg-6 col-xl-4 wow fadeInLeft" data-wow-delay=".2s">
+                                        <a href="#investor" className="item active" data-bs-toggle="tab">
+                                            <div className="thumb">
+                                                <img src="assets/images/help/trading.png" alt=""/>
+                                            </div>
+                                            <h5>Become an investor</h5>
+                                        </a>
+                                    </div>
+                                    <div className="col-6 col-sm-4 col-md-4 col-lg-6 col-xl-4 wow fadeInLeft" data-wow-delay=".3s">
+                                        <a href="#privacy" className="item" data-bs-toggle="tab">
+                                            <div className="thumb">
+                                                <img src="assets/images/help/password.png" alt=""/>
+                                            </div>
+                                            <h5>our company privacy</h5>
+                                        </a>
+                                    </div>
+                                    <div className="col-6 col-sm-4 col-md-4 col-lg-6 col-xl-4 wow fadeInLeft" data-wow-delay=".4s">
+                                        <a href="#account" className="item" data-bs-toggle="tab">
+                                            <div className="thumb">
+                                                <img src="assets/images/help/support.png" alt=""/>
+                                            </div>
+                                            <h5>how setting account</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className="tab-content">
+                                    <div className="tab-pane show fade active" id="investor">
+                                        <div className="faq-wrapper">
+                                            <div className="faq-item wow fadeInUp" data-wow-delay=".3s">
+                                                <div className="faq-title" onclick={toggleQstn}>
+                                                    <h5 className="title">Why You Should Become An Investor?</h5>
+                                                    <div className="arrow">
+                                                        <i className="fas fa-angle-up"></i>
+                                                    </div>
+                                                </div>
+                                                <div className="faq-content">
+                                                    <p>
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis distinctio quas at, voluptates saepe asperiores nesciunt nulla dolor dolore alias! Saepe laboriosam aliquid, ullam nihil nostrum quibusdam iste expedita inventore?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="faq-item open active wow fadeInUp" data-wow-delay=".4s">
+                                                <div className="faq-title" onclick={toggleQstn}>
+                                                    <h5 className="title">Can I Invest Using Cryptocurrency?</h5>
+                                                    <div className="arrow">
+                                                        <i className="fas fa-angle-up"></i>
+                                                    </div>
+                                                </div>
+                                                <div className="faq-content">
+                                                    <p>
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis distinctio quas at, voluptates saepe asperiores nesciunt nulla dolor dolore alias! Saepe laboriosam aliquid, ullam nihil nostrum quibusdam iste expedita inventore?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="faq-item wow fadeInUp" data-wow-delay=".5s">
+                                                <div className="faq-title" onclick={toggleQstn}>
+                                                    <h5 className="title">Why You Choose Us?</h5>
+                                                    <div className="arrow">
+                                                        <i className="fas fa-angle-up"></i>
+                                                    </div>
+                                                </div>
+                                                <div className="faq-content">
+                                                    <p>
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis distinctio quas at, voluptates saepe asperiores nesciunt nulla dolor dolore alias! Saepe laboriosam aliquid, ullam nihil nostrum quibusdam iste expedita inventore?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="tab-pane show fade" id="privacy">
+                                        <div className="faq-wrapper">
+                                            <div className="faq-item">
+                                                <div className="faq-title" onclick={toggleQstn}>
+                                                    <h5 className="title">Frequently gets updated based on new data insights.</h5>
+                                                    <div className="arrow">
+                                                        <i className="fas fa-angle-up"></i>
+                                                    </div>
+                                                </div>
+                                                <div className="faq-content">
+                                                    <p>
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis distinctio quas at, voluptates saepe asperiores nesciunt nulla dolor dolore alias! Saepe laboriosam aliquid, ullam nihil nostrum quibusdam iste expedita inventore?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="faq-item open active">
+                                                <div className="faq-title" onclick={toggleQstn}>
+                                                    <h5 className="title">Drives internal pageviews to.</h5>
+                                                    <div className="arrow">
+                                                        <i className="fas fa-angle-up"></i>
+                                                    </div>
+                                                </div>
+                                                <div className="faq-content">
+                                                    <p>
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis distinctio quas at, voluptates saepe asperiores nesciunt nulla dolor dolore alias! Saepe laboriosam aliquid, ullam nihil nostrum quibusdam iste expedita inventore?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="faq-item">
+                                                <div className="faq-title" onclick={toggleQstn}>
+                                                    <h5 className="title">Showcases expertise, trust, and authority.</h5>
+                                                    <div className="arrow">
+                                                        <i className="fas fa-angle-up"></i>
+                                                    </div>
+                                                </div>
+                                                <div className="faq-content">
+                                                    <p>
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis distinctio quas at, voluptates saepe asperiores nesciunt nulla dolor dolore alias! Saepe laboriosam aliquid, ullam nihil nostrum quibusdam iste expedita inventore?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="tab-pane show fade" id="account">
+                                        <div className="faq-wrapper">
+                                            <div className="faq-item">
+                                                <div className="faq-title" onclick={toggleQstn}>
+                                                    <h5 className="title">Frequently gets updated based on new data insights.</h5>
+                                                    <div className="arrow">
+                                                        <i className="fas fa-angle-up"></i>
+                                                    </div>
+                                                </div>
+                                                <div className="faq-content">
+                                                    <p>
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis distinctio quas at, voluptates saepe asperiores nesciunt nulla dolor dolore alias! Saepe laboriosam aliquid, ullam nihil nostrum quibusdam iste expedita inventore?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="faq-item open active">
+                                                <div className="faq-title" onclick={toggleQstn}>
+                                                    <h5 className="title">Drives internal pageviews to.</h5>
+                                                    <div className="arrow">
+                                                        <i className="fas fa-angle-up"></i>
+                                                    </div>
+                                                </div>
+                                                <div className="faq-content">
+                                                    <p>
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis distinctio quas at, voluptates saepe asperiores nesciunt nulla dolor dolore alias! Saepe laboriosam aliquid, ullam nihil nostrum quibusdam iste expedita inventore?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="faq-item">
+                                                <div className="faq-title" onclick={toggleQstn}>
+                                                    <h5 className="title">Showcases expertise, trust, and authority.</h5>
+                                                    <div className="arrow">
+                                                        <i className="fas fa-angle-up"></i>
+                                                    </div>
+                                                </div>
+                                                <div className="faq-content">
+                                                    <p>
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis distinctio quas at, voluptates saepe asperiores nesciunt nulla dolor dolore alias! Saepe laboriosam aliquid, ullam nihil nostrum quibusdam iste expedita inventore?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 d-none d-lg-block wow fadeInRight">
+                            <div className="help-thumb ">
+                                <img src="assets/images/help/thumb.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <section className="affiliate-section padding-top padding-bottom overflow-hidden">
+                <div className="container">
+                    <div className="row gy-5 align-items-center">
+                        <div className="col-lg-5 d-lg-block d-none wow fadeInLeft">
+                            <div className="affiliate-thumb">
+                                <img src="assets/images/affiliate/thumb.png" alt="affiliate"/>
+                            </div>
+                        </div>
+                        <div className="col-lg-7">
+                            <div className="affiliate-content">
+                                <div className="section-header">
+                                    <span className="subtitle  fadeInUp">Affiliate program</span>
+                                    <h2 className="title  fadeInUp" data--delay=".5s">Make Money By Affiliate With Out Invest</h2>
+                                </div>
+                                <div className="affilate-tab-menu row g-4">
+                                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4 tab-item  fadeInUp" data--delay=".3s" >
+                                        <div className="affiliate-tab-item">
+                                            <div className="item-inner">
+                                                <h3 className="percentage">05%</h3>
+                                                <span className="serial">1st</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4 tab-item  fadeInUp" data--delay=".4s" >
+                                        <div className="affiliate-tab-item">
+                                            <div className="item-inner">
+                                                <h3 className="percentage">07%</h3>
+                                                <span className="serial">2nd</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4 tab-item  fadeInUp" data--delay=".5s" >
+                                        <div className="affiliate-tab-item">
+                                            <div className="item-inner">
+                                                <h3 className="percentage">12%</h3>
+                                                <span className="serial">3rd</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="affiliate-item-content">
+                                    <h4 className="title">Dapibus et amet sociis, arcu orci orci tinci dunt neque. Purus etortor sjust mauris eumales uada architecto.</h4>
+                                    <p>Pulvinar a diam ipsum volutpat, bibendum bibendum quia urna id eros. Laoreet fusce dictum amet, purus facilisis pellentesque sed est tristique, ut ligula ac aut integer per, eu purus commodo, id fermentum semper nisl a. Interdum purus molestie. Volutpat quisque justo tellus arcu eget, nonummy vel luctus hendrerit etiam, integer congue aliquam, nunc velit sunt ut at ve</p>
+                                    <a href="affiliate.html" className="cmn--btn">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="shape">
+                    <img src="assets/images/affiliate/bg-map.png" alt="affiliate"/>
+                </div>
+            </section>
+
+
+
+            <section className="payment-gateway padding-bottom">
+                <div className="container">
+                    <div className="row align-items-center gy-4">
+                        <div className="col-lg-5">
+                            <div className="section-header">
+                                <h2 className="title  fadeInUp" data--delay=".5s">We accept payment in crypto</h2>
+                                <p className=" fadeInUp" data--delay=".6s">
+                                    We support the popular cryptocurrencies like Bitcoin, Ethereum, Tether, Litecoin, Dash, Binance, Solana, and many more.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-lg-7  fadeInRight">
+                            <div className="payment-gateway-slider">
+                                <div className="sigle-slider">
+                                    <div className="gateway-item">
+                                        <img src="/assets/images/gateway/icon1.png" alt="gateway"/>
+                                        <span className="coin-name">Bitcoin</span>
+                                    </div>
+                                </div>
+                                <div className="sigle-slider">
+                                    <div className="gateway-item">
+                                        <img src="/assets/images/gateway/icon2.png" alt="gateway"/>
+                                        <span className="coin-name">Ethereum</span>
+                                    </div>
+                                </div>
+                                <div className="sigle-slider">
+                                    <div className="gateway-item">
+                                        <img src="/assets/images/gateway/icon3.png" alt="gateway"/>
+                                        <span className="coin-name">Ripple</span>
+                                    </div>
+                                </div>
+                                <div className="sigle-slider">
+                                    <div className="gateway-item">
+                                        <img src="/assets/images/gateway/icon4.png" alt="gateway"/>
+                                        <span className="coin-name">Litecoin</span>
+                                    </div>
+                                </div>
+                                <div className="sigle-slider">
+                                    <div className="gateway-item">
+                                        <img src="/assets/images/gateway/icon2.png" alt="gateway"/>
+                                        <span className="coin-name">Ethereum</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <ProfitCalculatorBox/>
         </>
     );
 }

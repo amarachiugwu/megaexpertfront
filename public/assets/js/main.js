@@ -62,6 +62,7 @@ window.addEventListener('scroll', function(){
   header.classList.toggle('sticky', window.scrollY > 0);
 
 });
+
 var prevScrollpos = window.pageYOffset;
 var scrollPosition = window.scrollY;
 if (scrollPosition >= 1) {
@@ -155,46 +156,47 @@ $('.banner-slider').slick({
 });
    
 
-$('.sponsor-slider').slick({
-  slidesToShow: 6,
-  slidesToScroll: 2,
-  infinite: true,
-  dots: false,
-  arrows: false,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 500,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
+// $('.sponsor-slider').slick({
+//   slidesToShow: 6,
+//   slidesToScroll: 2,
+//   infinite: true,
+//   dots: false,
+//   arrows: false,
+//   autoplay: true,
+//   autoplaySpeed: 3000,
+//   responsive: [
+//     {
+//       breakpoint: 1200,
+//       settings: {
+//         slidesToShow: 5,
+//         slidesToScroll: 1
+//       }
+//     },
+//     {
+//       breakpoint: 991,
+//       settings: {
+//         slidesToShow: 4,
+//         slidesToScroll: 1
+//       }
+//     },
+//     {
+//       breakpoint: 767,
+//       settings: {
+//         slidesToShow: 3,
+//         slidesToScroll: 1
+//       }
+//     },
+//     {
+//       breakpoint: 500,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 1
+//       }
+//     },
 
-  ]
-});
+//   ]
+// });
+
 $('.payment-gateway-slider').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -243,36 +245,36 @@ $(".counter-item").each(function () {
     }
   });
 });
-   
 
-$('.testimonial-slider').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  infinite: true,
-  arrows: true,
-  dots: false,
-  autoplay: true,
-  pauseOnHover: true,
-  centerMode: true,
-  fade: true,
-  asNavFor: '.testimonial-img-slider',
-  nextArrow: '<i class="las la-arrow-right arrow-right"></i>',
-  prevArrow: '<i class="las la-arrow-left arrow-left"></i> ',
-});
-$('.testimonial-img-slider').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  asNavFor: '.testimonial-slider',
-  dots: true,
-  centerMode: true,
-  infinite: true,
-  focusOnSelect: true,
-  autoplay: true,
-  pauseOnHover: true,
-  arrows: false,
-  fade: true,
-  speed: 1000,
-});
+// $('.testimonial-slider').slick({
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   infinite: true,
+//   arrows: true,
+//   dots: false,
+//   autoplay: true,
+//   pauseOnHover: true,
+//   centerMode: true,
+//   fade: true,
+//   asNavFor: '.testimonial-img-slider',
+//   nextArrow: '<i class="las la-arrow-right arrow-right"></i>',
+//   prevArrow: '<i class="las la-arrow-left arrow-left"></i> ',
+// });
+
+// $('.testimonial-img-slider').slick({
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   asNavFor: '.testimonial-slider',
+//   dots: true,
+//   centerMode: true,
+//   infinite: true,
+//   focusOnSelect: true,
+//   autoplay: true,
+//   pauseOnHover: true,
+//   arrows: false,
+//   fade: true,
+//   speed: 1000,
+// });
 
 //Faq
 $('.faq-wrapper .faq-title, .faq-wrapper-two .faq-title-two').on('click', function (e) {
@@ -297,35 +299,35 @@ $('.faq-tab-menu .item').on('click' ,function() {
 });
 
 
-$('.testimonial-slider-two').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  infinite: true,
-  dots: false,
-  arrows: false,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  margin: 20,
-  centerMode:true,
-  responsive: [
-    {
-      breakpoint: 1199,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
+// $('.testimonial-slider-two').slick({
+//   slidesToShow: 3,
+//   slidesToScroll: 1,
+//   infinite: true,
+//   dots: false,
+//   arrows: false,
+//   autoplay: true,
+//   autoplaySpeed: 2000,
+//   margin: 20,
+//   centerMode:true,
+//   responsive: [
+//     {
+//       breakpoint: 1199,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 1
+//       }
+//     },
+//     {
+//       breakpoint: 767,
+//       settings: {
+//         slidesToShow: 1,
+//         slidesToScroll: 1
+//       }
+//     },
     
 
-  ]
-});
+//   ]
+// });
 
 $( function() {
   $( "#btc-range" ).slider({

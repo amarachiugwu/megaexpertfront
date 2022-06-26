@@ -10,7 +10,6 @@ import MissionVisionScreen from './screens/MissionVisionScreen';
 import SignupScreen from './screens/SignupScreen';
 function App() {
 
-
     function dropDown() {
         var element = $(this).parent('li');
         element.toggleClass('open');
@@ -40,6 +39,7 @@ function App() {
         $('.overlay').removeClass('overlay-color')
         $('.menu, .header-trigger').removeClass('active')
     }
+
 
 
   return (
@@ -106,6 +106,9 @@ function App() {
                                 <Link to="/sign-up" onClick={toggleNav}>Sign Up</Link>
                             </li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="investment-plan-01.html" className="cmn--btn">Invest Now</a>
                     </li>
                 </ul>
               </div>
