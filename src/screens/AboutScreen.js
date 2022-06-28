@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from "react-slick";
 import BannerBox from '../components/BannerBox'
+import PaymentGatewayBox from '../components/PaymentGatewayBox';
 import ProfitCalculatorBox from '../components/ProfitCalculatorBox'
 import WhyUsBox from '../components/WhyUsBox'
 
@@ -34,7 +35,7 @@ function AboutScreen() {
           
       
         ]
-      }
+    }
 
   return (
     <>
@@ -306,7 +307,7 @@ function AboutScreen() {
                             <span className="subtitle  fadeInUp">client feedback</span>
                             <h2 className="title  mx-100">Happy Client What Say About Us</h2>
                             <p className=" fadeInUp" data--delay=".6s">
-                                Pipsum dolor sit amet consectetur adipisicing elit. Aliquam modi explicabo nam ex unde et dolorum non dolor! Dolorum nobis
+                                See what our clients say about us, we take customer care very seriously, we are always at your service.
                             </p>
                         </div>
                     </div>
@@ -322,24 +323,9 @@ function AboutScreen() {
                                     <div className="quote-icon">
                                         <i className="las la-quote-left"></i>
                                     </div>
-                                    <h4 className="name">Robindronat</h4>
-                                    <span className="designation">Hyip Investor</span>
-                                    <p>Placerat pellentesque eros elit lobortis eleifend amet vivamus integer sed tellus quibusdam mauris. Leo cras molestie.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="single-slider">
-                            <div className="testimonial-item-two">
-                                <div className="testimonial-thumb-two">
-                                    <img src="assets/images/testimonial/item4.png" alt=""/>
-                                </div>
-                                <div className="testimonial-content-two">
-                                    <div className="quote-icon">
-                                        <i className="las la-quote-left"></i>
-                                </div>
-                                    <h4 className="name">Robindronat</h4>
-                                    <span className="designation">Hyip Investor</span>
-                                    <p>Placerat pellentesque eros elit lobortis eleifend amet vivamus integer sed tellus quibusdam mauris. Leo cras molestie.</p>
+                                    <h4 className="name">Robindronath Chondro</h4>
+                                    <span className="designation">Businessman</span>
+                                    <p> Since i started investing with Mega Expert i have stopped investing with other financial institutions including my bank because the services i get here is second to non, kudos to all the team behind this great platform..</p>
                                 </div>
                             </div>
                         </div>
@@ -351,10 +337,10 @@ function AboutScreen() {
                                 <div className="testimonial-content-two">
                                     <div className="quote-icon">
                                         <i className="las la-quote-left"></i>
-                                    </div>
-                                    <h4 className="name">Robindronat</h4>
-                                    <span className="designation">Hyip Investor</span>
-                                    <p>Placerat pellentesque eros elit lobortis eleifend amet vivamus integer sed tellus quibusdam mauris. Leo cras molestie.</p>
+                                </div>
+                                    <h4 className="name">Investor</h4>
+                                    <span className="designation">Jubayer Al Somser</span>
+                                    <p> As an investor my major role is to find great platform, individuals and businesses to invest my money so that it can work for me, this platform is one of the platform i invest in, they always deliver in due time.</p>
                                 </div>
                             </div>
                         </div>
@@ -367,9 +353,24 @@ function AboutScreen() {
                                     <div className="quote-icon">
                                         <i className="las la-quote-left"></i>
                                     </div>
-                                    <h4 className="name">Robindronat</h4>
-                                    <span className="designation">Hyip Investor</span>
-                                    <p>Placerat pellentesque eros elit lobortis eleifend amet vivamus integer sed tellus quibusdam mauris. Leo cras molestie.</p>
+                                    <h4 className="name">Raihan Rafuj</h4>
+                                    <span className="designation">Designer</span>
+                                    <p>I basically put my money here to earn while i save, instead of saving in my bank which returns little or no intrest, i am satisfieed with the services i get here.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="single-slider">
+                            <div className="testimonial-item-two">
+                                <div className="testimonial-thumb-two">
+                                    <img src="assets/images/testimonial/item1.png" alt=""/>
+                                </div>
+                                <div className="testimonial-content-two">
+                                    <div className="quote-icon">
+                                        <i className="las la-quote-left"></i>
+                                    </div>
+                                    <h4 className="name">Chris Stone</h4>
+                                    <span className="designation">Investor</span>
+                                    <p>This platform is one of the best investment platforms, i am impressed</p>
                                 </div>
                             </div>
                         </div>
@@ -381,54 +382,7 @@ function AboutScreen() {
 
 
 
-        <section className="payment-gateway padding-bottom">
-            <div className="container">
-                <div className="row align-items-center gy-4">
-                    <div className="col-lg-5">
-                        <div className="section-header">
-                            <h2 className="title  fadeInUp" data--delay=".5s">We accept payment in crypto</h2>
-                            <p className=" fadeInUp" data--delay=".6s">
-                                We support the popular cryptocurrencies like Bitcoin, Ethereum, Tether, Litecoin, Dash, Binance, Solana, and many more.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="col-lg-7  fadeInRight">
-                        <div className="payment-gateway-slider">
-                            <div className="sigle-slider">
-                                <div className="gateway-item">
-                                    <img src="/assets/images/gateway/icon1.png" alt="gateway"/>
-                                    <span className="coin-name">Bitcoin</span>
-                                </div>
-                            </div>
-                            <div className="sigle-slider">
-                                <div className="gateway-item">
-                                    <img src="/assets/images/gateway/icon2.png" alt="gateway"/>
-                                    <span className="coin-name">Ethereum</span>
-                                </div>
-                            </div>
-                            <div className="sigle-slider">
-                                <div className="gateway-item">
-                                    <img src="/assets/images/gateway/icon3.png" alt="gateway"/>
-                                    <span className="coin-name">Ripple</span>
-                                </div>
-                            </div>
-                            <div className="sigle-slider">
-                                <div className="gateway-item">
-                                    <img src="/assets/images/gateway/icon4.png" alt="gateway"/>
-                                    <span className="coin-name">Litecoin</span>
-                                </div>
-                            </div>
-                            <div className="sigle-slider">
-                                <div className="gateway-item">
-                                    <img src="/assets/images/gateway/icon2.png" alt="gateway"/>
-                                    <span className="coin-name">Ethereum</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <PaymentGatewayBox/>
 
 
 

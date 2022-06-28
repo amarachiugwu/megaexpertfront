@@ -395,90 +395,91 @@ function FAQScreen() {
 
 
    
-   <section className="testimonial-section-two padding-top padding-bottom">
-       <div className="container">
-           <div className="row justify-content-center">
-               <div className="col-lg-7">
-                   <div className="section-header text-center">
-                       <span className="subtitle  fadeInUp">client feedback</span>
-                       <h2 className="title  mx-100">Happy Client What Say About Us</h2>
-                       <p className=" fadeInUp" data--delay=".6s">
-                           Pipsum dolor sit amet consectetur adipisicing elit. Aliquam modi explicabo nam ex unde et dolorum non dolor! Dolorum nobis
-                       </p>
-                   </div>
-               </div>
-           </div>
-           <div className="testimonial-slider-two">
-               <Slider {...settings}>
-                   <div className="single-slider">
-                       <div className="testimonial-item-two">
-                           <div className="testimonial-thumb-two">
-                               <img src="assets/images/testimonial/item2.png" alt=""/>
-                           </div>
-                           <div className="testimonial-content-two">
-                               <div className="quote-icon">
-                                   <i className="las la-quote-left"></i>
-                               </div>
-                               <h4 className="name">Robindronat</h4>
-                               <span className="designation">Hyip Investor</span>
-                               <p>Placerat pellentesque eros elit lobortis eleifend amet vivamus integer sed tellus quibusdam mauris. Leo cras molestie.</p>
-                           </div>
-                       </div>
-                   </div>
-                   <div className="single-slider">
-                       <div className="testimonial-item-two">
-                           <div className="testimonial-thumb-two">
-                               <img src="assets/images/testimonial/item4.png" alt=""/>
-                           </div>
-                           <div className="testimonial-content-two">
-                               <div className="quote-icon">
-                                   <i className="las la-quote-left"></i>
-                           </div>
-                               <h4 className="name">Robindronat</h4>
-                               <span className="designation">Hyip Investor</span>
-                               <p>Placerat pellentesque eros elit lobortis eleifend amet vivamus integer sed tellus quibusdam mauris. Leo cras molestie.</p>
-                           </div>
-                       </div>
-                   </div>
-                   <div className="single-slider">
-                       <div className="testimonial-item-two">
-                           <div className="testimonial-thumb-two">
-                               <img src="assets/images/testimonial/item3.png" alt=""/>
-                           </div>
-                           <div className="testimonial-content-two">
-                               <div className="quote-icon">
-                                   <i className="las la-quote-left"></i>
-                               </div>
-                               <h4 className="name">Robindronat</h4>
-                               <span className="designation">Hyip Investor</span>
-                               <p>Placerat pellentesque eros elit lobortis eleifend amet vivamus integer sed tellus quibusdam mauris. Leo cras molestie.</p>
-                           </div>
-                       </div>
-                   </div>
-                   <div className="single-slider">
-                       <div className="testimonial-item-two">
-                           <div className="testimonial-thumb-two">
-                               <img src="assets/images/testimonial/item4.png" alt=""/>
-                           </div>
-                           <div className="testimonial-content-two">
-                               <div className="quote-icon">
-                                   <i className="las la-quote-left"></i>
-                               </div>
-                               <h4 className="name">Robindronat</h4>
-                               <span className="designation">Hyip Investor</span>
-                               <p>Placerat pellentesque eros elit lobortis eleifend amet vivamus integer sed tellus quibusdam mauris. Leo cras molestie.</p>
-                           </div>
-                       </div>
-                   </div>
+        <section className="testimonial-section-two padding-top padding-bottom">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-lg-7">
+                        <div className="section-header text-center">
+                            <span className="subtitle  fadeInUp">client feedback</span>
+                            <h2 className="title  mx-100">Happy Client What Say About Us</h2>
+                            <p className=" fadeInUp" data--delay=".6s">
+                                Pipsum dolor sit amet consectetur adipisicing elit. Aliquam modi explicabo nam ex unde et dolorum non dolor! Dolorum nobis
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="testimonial-slider-two">
+                    <Slider {...settings}>
+                        <div className="single-slider">
+                            <div className="testimonial-item-two">
+                                <div className="testimonial-thumb-two">
+                                    <img src="assets/images/testimonial/item2.png" alt=""/>
+                                </div>
+                                <div className="testimonial-content-two">
+                                    <div className="quote-icon">
+                                        <i className="las la-quote-left"></i>
+                                    </div>
+                                    <h4 className="name">Robindronat</h4>
+                                    <span className="designation">Hyip Investor</span>
+                                    <p>Placerat pellentesque eros elit lobortis eleifend amet vivamus integer sed tellus quibusdam mauris. Leo cras molestie.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="single-slider">
+                            <div className="testimonial-item-two">
+                                <div className="testimonial-thumb-two">
+                                    <img src="assets/images/testimonial/item4.png" alt=""/>
+                                </div>
+                                <div className="testimonial-content-two">
+                                    <div className="quote-icon">
+                                        <i className="las la-quote-left"></i>
+                                </div>
+                                    <h4 className="name">Robindronat</h4>
+                                    <span className="designation">Hyip Investor</span>
+                                    <p>Placerat pellentesque eros elit lobortis eleifend amet vivamus integer sed tellus quibusdam mauris. Leo cras molestie.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="single-slider">
+                            <div className="testimonial-item-two">
+                                <div className="testimonial-thumb-two">
+                                    <img src="assets/images/testimonial/item3.png" alt=""/>
+                                </div>
+                                <div className="testimonial-content-two">
+                                    <div className="quote-icon">
+                                        <i className="las la-quote-left"></i>
+                                    </div>
+                                    <h4 className="name">Robindronat</h4>
+                                    <span className="designation">Hyip Investor</span>
+                                    <p>Placerat pellentesque eros elit lobortis eleifend amet vivamus integer sed tellus quibusdam mauris. Leo cras molestie.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="single-slider">
+                            <div className="testimonial-item-two">
+                                <div className="testimonial-thumb-two">
+                                    <img src="assets/images/testimonial/item4.png" alt=""/>
+                                </div>
+                                <div className="testimonial-content-two">
+                                    <div className="quote-icon">
+                                        <i className="las la-quote-left"></i>
+                                    </div>
+                                    <h4 className="name">Robindronat</h4>
+                                    <span className="designation">Hyip Investor</span>
+                                    <p>Placerat pellentesque eros elit lobortis eleifend amet vivamus integer sed tellus quibusdam mauris. Leo cras molestie.</p>
+                                </div>
+                            </div>
+                        </div>
 
-               </Slider>
-           </div>
-       </div>
-   </section>
+                    </Slider>
+                </div>
+            </div>
+        </section>
 
 
 
-   <section className="payment-gateway padding-bottom">
+
+        <section className="payment-gateway padding-bottom">
        <div className="container">
            <div className="row align-items-center gy-4">
                <div className="col-lg-5">
@@ -525,7 +526,8 @@ function FAQScreen() {
                </div>
            </div>
        </div>
-   </section>
+        </section>
+        
 
 
 

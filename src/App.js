@@ -8,30 +8,54 @@ import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from './screens/LoginScreen';
 import MissionVisionScreen from './screens/MissionVisionScreen';
 import SignupScreen from './screens/SignupScreen';
+import PageNotFoundScreen from './screens/PageNotFoundScreen';
+
+function dropDown(id) {
+    var dropElement = document.getElementById(id);
+    var element = $(dropElement).parent('li');
+    element.toggleClass('open');
+
+    if (element.hasClass('open')) {
+        element.removeClass('open');
+        element.find('li').toggleClass('open');
+        element.find('ul').slideUp(400, "swing");
+
+
+        console.log('low');
+        element.addClass('open');
+        element.children('ul').slideDown(400, "swing");
+        element.siblings('li').children('ul').slideUp(400, "swing");
+        element.siblings('li').toggleClass('open');
+        element.siblings('li').find('li').toggleClass('open');
+        element.siblings('li').find('ul').slideUp(400, "swing");
+    } else {
+        element.addClass('open');
+        element.children('ul').slideDown(400, "swing");
+        element.siblings('li').children('ul').slideUp(400, "swing");
+        element.siblings('li').toggleClass('open');
+        element.siblings('li').find('li').toggleClass('open');
+        element.siblings('li').find('ul').slideUp(400, "swing");
+
+
+        console.log('hi');
+        element.removeClass('open');
+        element.find('li').toggleClass('open');
+        element.find('ul').slideUp(400, "swing");
+    }
+}
+
 function App() {
 
-    function dropDown() {
-        var element = $(this).parent('li');
-        element.toggleClass('open');
-        if (element.hasClass('open')) {
-            // element.removeClass('open');
-            // element.find('li').removeClass('open');
-            // element.find('ul').slideUp(400, "swing");
-        } else {
-            // element.addClass('open');
-            // element.children('ul').slideDown(400, "swing");
-            // element.siblings('li').children('ul').slideUp(400, "swing");
-            // element.siblings('li').removeClass('open');
-            // element.siblings('li').find('li').removeClass('open');
-            // element.siblings('li').find('ul').slideUp(400, "swing");
-        }
-    }
-
+    
     
     function toggleNav() {
         $('.menu,.header-trigger').toggleClass('active')
-        $('.overlay').toggleClass('overlay-color')
-        $('.overlay').removeClass('active')
+        // $('.overlay').toggleClass('overlay-color')
+        // $('.overlay').removeClass('active')
+
+        $('html, body').animate({
+            scrollTop: 0
+        }, 300);
     }
 
 
@@ -70,16 +94,21 @@ function App() {
                     </li>
 
                     <li className="has-sub-menu" onClick={dropDown}>
-                        <Link to="#" onClick={dropDown}>Plan</Link>
+                        <Link to="#" id="plan" onClick={
+                            (e) => {
+                                e.preventDefault();
+                                dropDown('plan')
+                            }
+                        }>Plan</Link>
                         <ul className="sub-menu">
                             <li>
-                                <Link to="/investment-plan-01" onClick={toggleNav}>Investment Plan 01</Link>
+                                <Link to="/bronze" onClick={toggleNav}>Bronze Plan</Link>
                             </li>
                             <li>
-                                <Link to="/investment-plan-02" onClick={toggleNav}>Investment Plan 02</Link>
+                                <Link to="/silver" onClick={toggleNav}>Silver Plan</Link>
                             </li>
                             <li>
-                                <Link to="/investment-plan-03" onClick={toggleNav}>Investment Plan 03</Link>
+                                <Link to="/gold" onClick={toggleNav}>Gold Plan</Link>
                             </li>
                         </ul>
                     </li>
@@ -97,7 +126,12 @@ function App() {
                     </li>
                     
                     <li className="has-sub-menu">
-                        <Link to="#">Account</Link>
+                        <Link to="#" id="account" onClick={
+                            (e) => {
+                                e.preventDefault();
+                                dropDown('account')
+                            }
+                        }>Account</Link>
                         <ul className="sub-menu">
                             <li>
                                 <Link to="/login" onClick={toggleNav}>Log In</Link>
@@ -116,7 +150,7 @@ function App() {
           </div>
         </header>
 
-        <main>
+        <main style={{ minHeight: "280px" }}>
           <Routes>
             <Route path="/" element={<HomeScreen />} exact></Route>
             <Route path="/about" element={<AboutScreen />}></Route>
@@ -125,6 +159,7 @@ function App() {
             <Route path="/contact" element={<ContactScreen />}></Route>
             <Route path="/login" element={<LoginScreen />}></Route>
             <Route path="/sign-up" element={<SignupScreen />}></Route>
+            <Route path="*" element={<PageNotFoundScreen />}></Route>
           </Routes> 
         </main>
 
@@ -209,33 +244,22 @@ function App() {
                           <h4 className="widget-title">Investment</h4>
                           <ul className="footer-links">
                               <li>
-                                  <Link to="/investment-plan-01">
-                                      
-                                  <i className="las la-angle-double-right"></i>Starter Plan</Link>
-                              </li>
-                              <li>
-                                  <Link to="/investment-plan-02">
+                                  <Link to="/bronze">
                                       
                                   <i className="las la-angle-double-right"></i>
-                                  Medium Plan</Link>
+                                  Bronze Plan</Link>
                               </li>
                               <li>
-                                  <Link to="/investment-plan-03">
-                                      
-                                  <i className="las la-angle-double-right"></i>
-                                  Special Plan </Link>
-                              </li>
-                              <li>
-                                  <Link to="/investment-plan-02">
-                                      
-                                  <i className="las la-angle-double-right"></i>
-                                  Vip Plan</Link>
-                              </li>
-                              <li>
-                                  <Link to="/investment-plan-01">
+                                  <Link to="/silver">
                                       
                                   <i className="las la-angle-double-right"></i>
                                   Silver Plan</Link>
+                              </li>
+                              <li>
+                                  <Link to="/gold">
+                                      
+                                  <i className="las la-angle-double-right"></i>
+                                  Gold Plan </Link>
                               </li>
                           </ul>
                       </div>

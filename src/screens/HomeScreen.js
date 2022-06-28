@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 // import $ from 'jquery'
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import WhyUsBox from "../components/WhyUsBox";
 import ProfitCalculatorBox from '../components/ProfitCalculatorBox'
+import PaymentGatewayBox from "../components/PaymentGatewayBox";
 function HomeScreen () {
 
     useEffect(() => {
@@ -104,10 +106,6 @@ function HomeScreen () {
         ]
     };
 
-    function  toggleQstn() {
-
-    }
-
 
     return (
         
@@ -204,6 +202,13 @@ function HomeScreen () {
 
             <div className="sponsor-section wow fadeInUp">
                 <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-7">
+                            <div className="section-header text-center">
+                                <h2 className="title wow fadeInUp" data-wow-delay=".4s">Sponsors</h2>
+                            </div>
+                        </div>
+                    </div>
                     <div className="sponsor-slider">
                         <Slider {...sponsors}>
                             <div className="single-slide">
@@ -329,79 +334,79 @@ function HomeScreen () {
                         <div className="col-sm-6 col-lg-12">
                             <div className="plan-item wow fadeIn" data-wow-delay=".1s">
                                 <div className="plan-inner-part">
-                                    <h2 className="plan-interest-percent">600%</h2>
+                                    <h2 className="plan-interest-percent">Bronze 25%</h2>
                                 </div>
                                 <div className="plan-inner-part">
                                     <ul className="plan-invest-limit">
                                         <li>
                                             <i className="fas fa-check"></i>
-                                            Minimum : $30.00
+                                            Minimum : $1000.00
                                         </li>
                                         <li>
                                             <i className="fas fa-check"></i>
-                                            Maximum : $1500.00
+                                            Maximum : $10,000.00
                                         </li>
                                     </ul>
                                 </div>
                                 <div className="plan-inner-part">
-                                    <h2 className="plan-invest-time">04 <sub>DAYS</sub></h2>
+                                    <h2 className="plan-invest-time">03 <sub>WEEKS</sub></h2>
                                 </div>
                                 <div className="plan-inner-part">
-                                    <a href="login.html" className="cmn--btn-2">Invest now</a>
+                                    <Link to="/gold" className="cmn--btn-2">Invest now</Link>
                                 </div>
                             </div>
                         </div>
                         <div className="col-sm-6 col-lg-12">
                             <div className="plan-item wow fadeIn" data-wow-delay=".2s">
                                 <div className="plan-inner-part">
-                                    <h2 className="plan-interest-percent">700%</h2>
+                                    <h2 className="plan-interest-percent">Silver 50%</h2>
                                 </div>
                                 <div className="plan-inner-part">
                                     <ul className="plan-invest-limit">
                                         <li>
                                             <i className="fas fa-check"></i>
-                                            Minimum : $30.00
+                                            Minimum : $10,000.00
                                         </li>
                                         <li>
                                             <i className="fas fa-check"></i>
-                                            Maximum : $1500.00
+                                            Maximum : $50,000.00
                                         </li>
                                     </ul>
                                 </div>
                                 <div className="plan-inner-part">
-                                    <h2 className="plan-invest-time">10 <sub>DAYS</sub></h2>
+                                    <h2 className="plan-invest-time">04 <sub>WEEKS</sub></h2>
                                 </div>
                                 <div className="plan-inner-part">
-                                    <a href="login.html" className="cmn--btn-2">Invest now</a>
+                                    <Link to="/silver" className="cmn--btn-2">Invest now</Link>
                                 </div>
                             </div>
                         </div>
                         <div className="col-sm-6 col-lg-12">
                             <div className="plan-item wow fadeIn" data-wow-delay=".3s">
                                 <div className="plan-inner-part">
-                                    <h2 className="plan-interest-percent">800%</h2>
+                                    <h2 className="plan-interest-percent">Gold 100%</h2>
                                 </div>
                                 <div className="plan-inner-part">
                                     <ul className="plan-invest-limit">
                                         <li>
                                             <i className="fas fa-check"></i>
-                                            Minimum : $30.00
+                                            Minimum : $50,000.00
                                         </li>
                                         <li>
                                             <i className="fas fa-check"></i>
-                                            Maximum : $1500.00
+                                            Maximum : Unlimited
                                         </li>
                                     </ul>
                                 </div>
                                 <div className="plan-inner-part">
-                                    <h2 className="plan-invest-time">07 <sub>DAYS</sub></h2>
+                                    <h2 className="plan-invest-time">06 <sub>WEEKS</sub></h2>
                                 </div>
                                 <div className="plan-inner-part">
-                                    <a href="login.html" className="cmn--btn-2">Invest now</a>
+                                    <Link to="/gold" className="cmn--btn-2">Invest now</Link>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-6 col-lg-12">
+                        {/* <div className="col-sm-6 col-lg-12">
                             <div className="plan-item wow fadeIn" data-wow-delay=".4s">
                                 <div className="plan-inner-part">
                                     <h2 className="plan-interest-percent">1200%</h2>
@@ -425,18 +430,18 @@ function HomeScreen () {
                                     <a href="login.html" className="cmn--btn-2">Invest now</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
-                    <div className="button text-center wow slideIn pb-4">
+                    {/* <div className="button text-center wow slideIn pb-4">
                         <a href="investment-plan-01.html" className="cmn--btn">Discover More</a>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
 
 
 
-            <section className="counter-section padding-top">
+            {/* <section className="counter-section padding-top">
                 <div className="container">
                     <div className="row justif-content-center gy-5">
                         <div className="col-lg-3 col-sm-6">
@@ -484,7 +489,7 @@ function HomeScreen () {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
 
 
@@ -517,7 +522,7 @@ function HomeScreen () {
                                             >
                                             <div className="content-item">
                                                 <div className="img-item padding bottom" style={styles.testimonialImg}>
-                                                    <img src="assets/images/testimonial/item3.png" alt="testimonial"/>
+                                                    <img src="assets/images/testimonial/item2.png" alt="testimonial"/>
                                                 </div>
 
                                                 <div className="quote-icon">
@@ -525,7 +530,7 @@ function HomeScreen () {
                                                 </div>
                                                 <div className="content-inner">
                                                     <p>
-                                                    Pipsum dolor sit, amet  adipisicing elit. Molestiae similique facere quia! Eligendi, eveniet aut impedit deleniti autem obcaecati ni
+                                                    Since i started investing with Mega Expert i have stopped investing with other financial institutions including my bank because the services i get here is second to non, kudos to all the team behind this great platform.
                                                     </p>
                                                     <h5 className="name">Robindronath Chondro</h5>
                                                     <span className="designation">Businessman</span>
@@ -542,10 +547,10 @@ function HomeScreen () {
                                                 </div>
                                                 <div className="content-inner">
                                                     <p>
-                                                        Mattis vestibulum elit omnis metuseu urna at facilisi loborntum turpis velsed molestie varius purus rhoncus 
+                                                        As an investor my major role is to find great platform, individuals and businesses to invest my money so that it can work for me, this platform is one of the platform i invest in, they always deliver in due time.
                                                     </p>
                                                     <h5 className="name">Jubayer Al Somser</h5>
-                                                    <span className="designation">Developer</span>
+                                                    <span className="designation">Investor</span>
                                                 </div>
                                             </div>
                                             <div className="content-item">
@@ -558,7 +563,7 @@ function HomeScreen () {
                                                 </div>
                                                 <div className="content-inner">
                                                     <p>
-                                                        Kikit Mattis vestibulum elit omnis metuseu urna at facilisi loborntum turpis velsed molestie varius purus rhoncus  incidunt ipsam soluta rem ipsum.
+                                                        I basically put my money here to earn while i save, instead of saving in my bank which returns little or no intrest, i am satisfieed with the services i get here.
                                                     </p>
                                                     <h5 className="name">Raihan Rafuj</h5>
                                                     <span className="designation">Designer</span>
@@ -575,7 +580,7 @@ function HomeScreen () {
 
 
 
-            <section className="help-section  overflow-hidden">
+            {/* <section className="help-section  overflow-hidden">
                 <div className="container">
                     <div className="row align-items-center gy-5 flex-column-reverse flex-lg-row">
                         <div className="col-lg-6">
@@ -617,7 +622,7 @@ function HomeScreen () {
                                     <div className="tab-pane show fade active" id="investor">
                                         <div className="faq-wrapper">
                                             <div className="faq-item wow fadeInUp" data-wow-delay=".3s">
-                                                <div className="faq-title" onclick={toggleQstn}>
+                                                <div className="faq-title" onClick={toggleQstn}>
                                                     <h5 className="title">Why You Should Become An Investor?</h5>
                                                     <div className="arrow">
                                                         <i className="fas fa-angle-up"></i>
@@ -630,7 +635,7 @@ function HomeScreen () {
                                                 </div>
                                             </div>
                                             <div className="faq-item open active wow fadeInUp" data-wow-delay=".4s">
-                                                <div className="faq-title" onclick={toggleQstn}>
+                                                <div className="faq-title" onClick={toggleQstn}>
                                                     <h5 className="title">Can I Invest Using Cryptocurrency?</h5>
                                                     <div className="arrow">
                                                         <i className="fas fa-angle-up"></i>
@@ -643,7 +648,7 @@ function HomeScreen () {
                                                 </div>
                                             </div>
                                             <div className="faq-item wow fadeInUp" data-wow-delay=".5s">
-                                                <div className="faq-title" onclick={toggleQstn}>
+                                                <div className="faq-title" onClick={toggleQstn}>
                                                     <h5 className="title">Why You Choose Us?</h5>
                                                     <div className="arrow">
                                                         <i className="fas fa-angle-up"></i>
@@ -660,7 +665,7 @@ function HomeScreen () {
                                     <div className="tab-pane show fade" id="privacy">
                                         <div className="faq-wrapper">
                                             <div className="faq-item">
-                                                <div className="faq-title" onclick={toggleQstn}>
+                                                <div className="faq-title" onClick={toggleQstn}>
                                                     <h5 className="title">Frequently gets updated based on new data insights.</h5>
                                                     <div className="arrow">
                                                         <i className="fas fa-angle-up"></i>
@@ -673,7 +678,7 @@ function HomeScreen () {
                                                 </div>
                                             </div>
                                             <div className="faq-item open active">
-                                                <div className="faq-title" onclick={toggleQstn}>
+                                                <div className="faq-title" onClick={toggleQstn}>
                                                     <h5 className="title">Drives internal pageviews to.</h5>
                                                     <div className="arrow">
                                                         <i className="fas fa-angle-up"></i>
@@ -686,7 +691,7 @@ function HomeScreen () {
                                                 </div>
                                             </div>
                                             <div className="faq-item">
-                                                <div className="faq-title" onclick={toggleQstn}>
+                                                <div className="faq-title" onClick={toggleQstn}>
                                                     <h5 className="title">Showcases expertise, trust, and authority.</h5>
                                                     <div className="arrow">
                                                         <i className="fas fa-angle-up"></i>
@@ -703,7 +708,7 @@ function HomeScreen () {
                                     <div className="tab-pane show fade" id="account">
                                         <div className="faq-wrapper">
                                             <div className="faq-item">
-                                                <div className="faq-title" onclick={toggleQstn}>
+                                                <div className="faq-title" onClick={toggleQstn}>
                                                     <h5 className="title">Frequently gets updated based on new data insights.</h5>
                                                     <div className="arrow">
                                                         <i className="fas fa-angle-up"></i>
@@ -716,7 +721,7 @@ function HomeScreen () {
                                                 </div>
                                             </div>
                                             <div className="faq-item open active">
-                                                <div className="faq-title" onclick={toggleQstn}>
+                                                <div className="faq-title" onClick={toggleQstn}>
                                                     <h5 className="title">Drives internal pageviews to.</h5>
                                                     <div className="arrow">
                                                         <i className="fas fa-angle-up"></i>
@@ -729,7 +734,7 @@ function HomeScreen () {
                                                 </div>
                                             </div>
                                             <div className="faq-item">
-                                                <div className="faq-title" onclick={toggleQstn}>
+                                                <div className="faq-title" onClick={toggleQstn}>
                                                     <h5 className="title">Showcases expertise, trust, and authority.</h5>
                                                     <div className="arrow">
                                                         <i className="fas fa-angle-up"></i>
@@ -753,7 +758,7 @@ function HomeScreen () {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             
 
@@ -798,9 +803,9 @@ function HomeScreen () {
                                     </div>
                                 </div>
                                 <div className="affiliate-item-content">
-                                    <h4 className="title">Dapibus et amet sociis, arcu orci orci tinci dunt neque. Purus etortor sjust mauris eumales uada architecto.</h4>
-                                    <p>Pulvinar a diam ipsum volutpat, bibendum bibendum quia urna id eros. Laoreet fusce dictum amet, purus facilisis pellentesque sed est tristique, ut ligula ac aut integer per, eu purus commodo, id fermentum semper nisl a. Interdum purus molestie. Volutpat quisque justo tellus arcu eget, nonummy vel luctus hendrerit etiam, integer congue aliquam, nunc velit sunt ut at ve</p>
-                                    <a href="affiliate.html" className="cmn--btn">View Details</a>
+                                    <h4 className="title">The affiliate program is our special feature for loyal Investors.Invite users and earn up to 12% of the fee on their exchange transactions!.</h4>
+                                    <p>The simple way to grow your money like the world’s most sophisticated investors. Our team of industry leading technology developers, financial and consumer technology experts with significant experience use the best strategy in providing our best mechanisms. Invest and invite you pals to start earning today.</p>
+                                    {/* <a href="affiliate.html" className="cmn--btn">View Details</a> */}
                                 </div>
                             </div>
                         </div>
@@ -813,54 +818,7 @@ function HomeScreen () {
 
 
 
-            <section className="payment-gateway padding-bottom">
-                <div className="container">
-                    <div className="row align-items-center gy-4">
-                        <div className="col-lg-5">
-                            <div className="section-header">
-                                <h2 className="title  fadeInUp" data--delay=".5s">We accept payment in crypto</h2>
-                                <p className=" fadeInUp" data--delay=".6s">
-                                    We support the popular cryptocurrencies like Bitcoin, Ethereum, Tether, Litecoin, Dash, Binance, Solana, and many more.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-lg-7  fadeInRight">
-                            <div className="payment-gateway-slider">
-                                <div className="sigle-slider">
-                                    <div className="gateway-item">
-                                        <img src="/assets/images/gateway/icon1.png" alt="gateway"/>
-                                        <span className="coin-name">Bitcoin</span>
-                                    </div>
-                                </div>
-                                <div className="sigle-slider">
-                                    <div className="gateway-item">
-                                        <img src="/assets/images/gateway/icon2.png" alt="gateway"/>
-                                        <span className="coin-name">Ethereum</span>
-                                    </div>
-                                </div>
-                                <div className="sigle-slider">
-                                    <div className="gateway-item">
-                                        <img src="/assets/images/gateway/icon3.png" alt="gateway"/>
-                                        <span className="coin-name">Ripple</span>
-                                    </div>
-                                </div>
-                                <div className="sigle-slider">
-                                    <div className="gateway-item">
-                                        <img src="/assets/images/gateway/icon4.png" alt="gateway"/>
-                                        <span className="coin-name">Litecoin</span>
-                                    </div>
-                                </div>
-                                <div className="sigle-slider">
-                                    <div className="gateway-item">
-                                        <img src="/assets/images/gateway/icon2.png" alt="gateway"/>
-                                        <span className="coin-name">Ethereum</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <PaymentGatewayBox/>
 
 
 

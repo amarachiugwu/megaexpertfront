@@ -197,43 +197,44 @@ $('.banner-slider').slick({
 //   ]
 // });
 
-$('.payment-gateway-slider').slick({
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  infinite: true,
-  dots: false,
-  arrows: true,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  margin: 20,
-  arrows:true,
-  nextArrow: '<i class="las la-angle-right arrow-left"></i>',
-  prevArrow: '<i class="las la-angle-left arrow-right"></i>',
-  responsive: [
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 500,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
 
-  ]
-});
+// $('.payment-gateway-slider').slick({
+//   slidesToShow: 4,
+//   slidesToScroll: 1,
+//   infinite: true,
+//   dots: false,
+//   arrows: true,
+//   autoplay: true,
+//   autoplaySpeed: 3000,
+//   margin: 20,
+//   arrows:true,
+//   nextArrow: '<i class="las la-angle-right arrow-left"></i>',
+//   prevArrow: '<i class="las la-angle-left arrow-right"></i>',
+//   responsive: [
+//     {
+//       breakpoint: 991,
+//       settings: {
+//         slidesToShow: 4,
+//         slidesToScroll: 1
+//       }
+//     },
+//     {
+//       breakpoint: 767,
+//       settings: {
+//         slidesToShow: 3,
+//         slidesToScroll: 1
+//       }
+//     },
+//     {
+//       breakpoint: 500,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 1
+//       }
+//     },
+
+//   ]
+// });
 
 $(".counter-item").each(function () {
   $(this).isInViewport(function (status) {
