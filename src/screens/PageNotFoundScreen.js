@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function PageNotFoundScreen() {
 
         
-    function toggleNav() {
+    function toTop() {
 
         $('html, body').animate({
             scrollTop: 0
@@ -31,7 +31,7 @@ function PageNotFoundScreen() {
                     
                     <div className="form--group">
                          <div className="button text-center wow slideIn pb-4">
-                            <Link className="cmn--btn" to="/" onClick={toggleNav}>Go back Home</Link> 
+                            <Link className="cmn--btn" to="/" onClick={toTop}>Go back Home</Link> 
                         </div>
                         {/* <input type="email" className="form--control" placeholder="Search for Page" />
                         <button className="custom-button" type="button">Search</button> */}

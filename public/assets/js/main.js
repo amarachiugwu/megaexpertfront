@@ -278,26 +278,26 @@ $(".counter-item").each(function () {
 // });
 
 //Faq
-$('.faq-wrapper .faq-title, .faq-wrapper-two .faq-title-two').on('click', function (e) {
-  var element = $(this).parent('.faq-item, .faq-item-two');
-  if (element.hasClass('open')) {
-    element.removeClass('open');
-    element.find('.faq-content, .faq-content-two').removeClass('open');
-    element.find('.faq-content, .faq-content-two').slideUp(300, "swing");
-  } else {
-    element.addClass('open');
-    element.children('.faq-content, .faq-content-two').slideDown(300, "swing");
-    element.siblings('.faq-item, .faq-item-two').children('.faq-content, .faq-content-two').slideUp(300, "swing");
-    element.siblings('.faq-item, .faq-item-two').removeClass('open');
-    element.siblings('.faq-item, .faq-item-two').find('.faq-title, .faq-title-two').removeClass('open');
-    element.siblings('.faq-item, .faq-item-two').find('.faq-content, .faq-content-two').slideUp(300, "swing");
-  }
-});
+// $('.faq-wrapper .faq-title, .faq-wrapper-two .faq-title-two').on('click', function (e) {
+//   var element = $(this).parent('.faq-item, .faq-item-two');
+//   if (element.hasClass('open')) {
+//     element.removeClass('open');
+//     element.find('.faq-content, .faq-content-two').removeClass('open');
+//     element.find('.faq-content, .faq-content-two').slideUp(300, "swing");
+//   } else {
+//     element.addClass('open');
+//     element.children('.faq-content, .faq-content-two').slideDown(300, "swing");
+//     element.siblings('.faq-item, .faq-item-two').children('.faq-content, .faq-content-two').slideUp(300, "swing");
+//     element.siblings('.faq-item, .faq-item-two').removeClass('open');
+//     element.siblings('.faq-item, .faq-item-two').find('.faq-title, .faq-title-two').removeClass('open');
+//     element.siblings('.faq-item, .faq-item-two').find('.faq-content, .faq-content-two').slideUp(300, "swing");
+//   }
+// });
 
-$('.faq-tab-menu .item').on('click' ,function() {
-  $('.faq-tab-menu .item').removeClass('active')
-  $(this).addClass('active')
-});
+// $('.faq-tab-menu .item').on('click' ,function() {
+//   $('.faq-tab-menu .item').removeClass('active')
+//   $(this).addClass('active')
+// });
 
 
 // $('.testimonial-slider-two').slick({

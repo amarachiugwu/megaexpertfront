@@ -9,6 +9,8 @@ import LoginScreen from './screens/LoginScreen';
 import MissionVisionScreen from './screens/MissionVisionScreen';
 import SignupScreen from './screens/SignupScreen';
 import PageNotFoundScreen from './screens/PageNotFoundScreen';
+import PlanScreen from './screens/PlanScreen';
+import AffiliateScreen from './screens/AffiliateScreen';
 
 function dropDown(id) {
     var dropElement = document.getElementById(id);
@@ -93,7 +95,11 @@ function App() {
                         <Link to="/about" onClick={toggleNav}>About</Link>
                     </li>
 
-                    <li className="has-sub-menu" onClick={dropDown}>
+                    <li>
+                        <Link to="/plan" onClick={toggleNav}>Plans</Link>
+                    </li>
+
+                    {/* <li className="has-sub-menu" onClick={dropDown}>
                         <Link to="#" id="plan" onClick={
                             (e) => {
                                 e.preventDefault();
@@ -111,7 +117,7 @@ function App() {
                                 <Link to="/gold" onClick={toggleNav}>Gold Plan</Link>
                             </li>
                         </ul>
-                    </li>
+                    </li> */}
 
                     <li>
                         <Link to="/mission-vision" onClick={toggleNav}>Mission & Vision</Link>
@@ -119,6 +125,10 @@ function App() {
 
                     <li>
                         <Link to="/faq" onClick={toggleNav}>Faq</Link>
+                    </li>
+
+                    <li>
+                        <Link to="/affiliate" onClick={toggleNav}>Affiliate</Link>
                     </li>
                   
                     <li>
@@ -154,8 +164,10 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeScreen />} exact></Route>
             <Route path="/about" element={<AboutScreen />}></Route>
+            <Route path="/plan" element={<PlanScreen />}></Route>
             <Route path="/mission-vision" element={<MissionVisionScreen />}></Route>
             <Route path="/faq" element={<FAQScreen />}></Route>
+            <Route path="/affiliate" element={<AffiliateScreen />}></Route>
             <Route path="/contact" element={<ContactScreen />}></Route>
             <Route path="/login" element={<LoginScreen />}></Route>
             <Route path="/sign-up" element={<SignupScreen />}></Route>
@@ -227,13 +239,15 @@ function App() {
                                   <i className="las la-angle-double-right"></i>Mission & Vision</Link>
                               </li> 
                               <li>
-                                  <Link to="/Login">
-                                      
+                                  <Link to="/affiliate">
+                                  <i className="las la-angle-double-right"></i>Affiliate</Link>
+                              </li>
+                              <li>
+                                  <Link to="/Login">   
                                   <i className="las la-angle-double-right"></i>Login</Link>
                               </li>
                               <li>
-                                  <Link to="/sign-up">
-                                      
+                                  <Link to="/sign-up"> 
                                   <i className="las la-angle-double-right"></i>Signup</Link>
                               </li>
                           </ul>
@@ -243,6 +257,12 @@ function App() {
                       <div className="footer-widget">
                           <h4 className="widget-title">Investment</h4>
                           <ul className="footer-links">
+                              <li>
+                                  <Link to="/plan">
+                                      
+                                  <i className="las la-angle-double-right"></i>
+                                  All Plan</Link>
+                              </li>
                               <li>
                                   <Link to="/bronze">
                                       
